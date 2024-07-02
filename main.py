@@ -1,10 +1,13 @@
+frankenstein_path = 'books/frankenstein.txt'
+
+
 def main():
-    frankenstein = open_frankenstein()
+    frankenstein = open_book(frankenstein_path)
     count = count_words(frankenstein)
     print(count)
 
-def open_frankenstein():
-    with open('books/frankenstein.txt') as f:
+def open_book(book_path):
+    with open(book_path) as f:
         contents = f.read()
         return contents
     
